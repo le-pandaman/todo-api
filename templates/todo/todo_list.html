@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block Title %}
+    Todo
+{% endblock Title %}
+{% block content %}
+    {% for todo in todos %}
+        <ol>
+            <ul>
+                <li>{{ todo.task }}</li>
+                <li>{{ todo.is_done }}</li>
+                <li>{{ todo.date }}</li>
+                <li>{{ todo.completed }}</li>
+            </ul>
+        </ol>
+    {% endfor %}
+{% endblock content %}
